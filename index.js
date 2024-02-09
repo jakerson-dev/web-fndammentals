@@ -1,8 +1,13 @@
-let num = [3,5,6,7]
-let total = 0;
+function checkPrime(num) {
+    let isPrime = true;
+    
+    for (let index = 2; index <= num/2; index++) {
+        if ( num % index == 0){
+            isPrime = false;
+            break;
+        }
+    } 
 
-for(const nums of num){
-    total += nums;
+    return isPrime;
 }
-
-console.log(`Total ${total}`)
+console.log(`Prime: ${checkPrime(2)}`)
